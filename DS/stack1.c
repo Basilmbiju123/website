@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 #define MAX_SIZE 4
-
-
 struct Stack {
     int items[MAX_SIZE];
     int top;
@@ -39,7 +36,6 @@ void peek(struct Stack *stack) {
         printf("Top item: %d\n", stack->items[stack->top]);
     }
 }
-
 void display(struct Stack *stack) {
     if (isEmpty(stack)) {
         printf("Stack is empty.\n");
@@ -51,13 +47,11 @@ void display(struct Stack *stack) {
         printf("\n");
     }
 }
-
 int main() {
     struct Stack stack;
     initialize(&stack);
     int choice, item;
-
-    do {
+   do {
         printf("\nStack Operations:\n");
         printf("1. Push\n");
         printf("2. Pop\n");
@@ -66,7 +60,6 @@ int main() {
         printf("5. Quit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
-
         switch (choice) {
             case 1:
                 printf("Enter an item to push onto the stack: ");
@@ -89,6 +82,6 @@ int main() {
                 printf("Invalid choice. Please try again.\n");
         }
     } while (1);
-
-    return 0;
+ return 0;
     }
+    
